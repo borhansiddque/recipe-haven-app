@@ -65,10 +65,10 @@ To run this project on your local machine:
 
 ```bash
 # Clone the repository
-git clone https://github.com/borhan-siddque/recipe-haven.git
+git clone https://github.com/borhansiddque/recipe-haven-app.git
 
 # Navigate into the project directory
-cd recipe-haven
+cd recipe-haven-app
 
 # Install dependencies
 npm install
@@ -86,7 +86,3 @@ The app will run at `http://localhost:5173`
 ![Recipe Haven Screenshot](https://i.ibb.co/9kgfn8J6/recipe-haven-app.png)
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License.
