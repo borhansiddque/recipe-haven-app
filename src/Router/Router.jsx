@@ -11,6 +11,9 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import DetailsRecipe from "../Pages/DetailsRecipe";
 import Loading from "../Components/Loading";
+import Support from "../Pages/Support";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import DashboardLayout from "../Layout/DashboardLayout";
 
 let router = createBrowserRouter([
   {
@@ -55,6 +58,10 @@ let router = createBrowserRouter([
         Component: About
       },
       {
+        path: "support",
+        Component: Support
+      },
+      {
         path: "my-recipes",
         loader: () =>
           fetch("https://recipe-haven-server-five.vercel.app/recipes"),
@@ -80,6 +87,16 @@ let router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: '/dashboard',
+    Component: DashboardLayout,
+    children: [
+      {
+        index: true,
+        Component: Dashboard
+      }
+    ]
+  }
 ]);
 
 export default router;

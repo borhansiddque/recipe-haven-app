@@ -51,6 +51,16 @@ const Navbar = () => {
           About Us
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/support"
+          className={({ isActive }) =>
+            `font-medium ${isActive && "text-orange-500"}`
+          }
+        >
+          Support
+        </NavLink>
+      </li>
       {user && (
         <>
           <li>

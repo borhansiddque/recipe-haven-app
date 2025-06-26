@@ -21,7 +21,7 @@ const TopRecipes = () => {
             Where food lovers find their next favorite dish
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {topRecipes.map((recipe) => (
             <div key={recipe._id} className="bg-base-200 shadow-md rounded-lg p-5 flex flex-col justify-between">
               <div className="">
