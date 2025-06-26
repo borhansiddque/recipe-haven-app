@@ -46,7 +46,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <div className="md:py-16 bg-base-100">
+    <div className="mb-10 sm:mb-20 bg-base-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <Fade direction="up" triggerOnce>
           <div className="text-center mb-12">

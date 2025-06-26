@@ -31,14 +31,14 @@ let router = createBrowserRouter([
         Component: AllRecipes,
         hydrateFallbackElement: <Loading />,
       },
-      {
-        path: "add-recipe",
-        element: (
-          <PrivateRoute>
-            <AddRecipe></AddRecipe>
-          </PrivateRoute>
-        ),
-      },
+      // {
+      //   path: "add-recipe",
+      //   element: (
+      //     <PrivateRoute>
+      //       <AddRecipe></AddRecipe>
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: "recipe-details/:id",
         loader: ({ params }) =>
@@ -89,12 +89,16 @@ let router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    Component: DashboardLayout,
+    element: <PrivateRoute> <DashboardLayout></DashboardLayout> </PrivateRoute>,
     children: [
       {
         index: true,
         Component: Dashboard
-      }
+      },
+      {
+        path: "add-recipe",
+        Component: AddRecipe
+      },
     ]
   }
 ]);

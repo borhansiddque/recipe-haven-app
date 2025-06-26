@@ -3,6 +3,7 @@ import Banner from "../Components/Banner";
 import FeaturesSection from "../Components/FeaturesSection";
 import TestimonialsSection from "../Components/TestimonialsSection";
 import TopRecipes from "../Components/TopRecipes";
+import RecipeChallenge from "../Components/RecipeChallenge";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <TopRecipes />
       <FeaturesSection />
       <TestimonialsSection />
+      <RecipeChallenge/>
     </div>
   );
 };

@@ -63,7 +63,7 @@ const Navbar = () => {
       </li>
       {user && (
         <>
-          <li>
+          {/* <li>
             <NavLink
               to="/add-recipe"
               className={({ isActive }) =>
@@ -81,6 +81,16 @@ const Navbar = () => {
               }
             >
               My Recipes
+            </NavLink>
+          </li> */}
+          <li>
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) =>
+                `font-medium ${isActive && "text-orange-500"}`
+              }
+            >
+              Dashboard
             </NavLink>
           </li>
         </>
