@@ -52,12 +52,7 @@ let router = createBrowserRouter([
       },
       {
         path: "about",
-        element: (
-          <PrivateRoute>
-            {" "}
-            <About></About>{" "}
-          </PrivateRoute>
-        ),
+        Component: About
       },
       {
         path: "my-recipes",

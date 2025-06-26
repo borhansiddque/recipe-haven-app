@@ -78,7 +78,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className="bg-base-300 py-5 sticky top-0 z-50 shadow-lg px-2 md:px-0">
+    <nav className="bg-base-300 py-5 sticky top-0 z-50 shadow-lg px-4 xl:px-0">
       <div className="mb-2 flex items-center justify-center md:hidden">
         <Link to="/" className="flex items-center gap-2">
           <PiChefHatLight className="h-8 w-8 text-orange-500" />

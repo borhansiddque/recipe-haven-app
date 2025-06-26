@@ -47,7 +47,7 @@ const Login = () => {
 
   return (
     <Fade direction="up" triggerOnce>
-      <div className="px-2 bg-base-100 min-h-screen pt-16">
+      <div className="px-2 bg-base-100 min-h-screen ">
         <div className="max-w-md mx-auto w-full bg-base-200 p-4 sm:p-8 rounded-lg shadow-md my-16 text-base-content">
           <div className="text-center space-y-2">
             <PiChefHatLight className="h-16 w-16 mx-auto text-orange-500" />

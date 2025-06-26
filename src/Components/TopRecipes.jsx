@@ -21,10 +21,11 @@ const TopRecipes = () => {
             Where food lovers find their next favorite dish
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {topRecipes.map((recipe) => (
-            <div key={recipe._id} className="bg-base-200 shadow-md rounded-lg p-5">
-              <p className="text-sm font-medium bg-orange-500 text-white py-1 px-2 inline-block rounded-full mb-5">
+            <div key={recipe._id} className="bg-base-200 shadow-md rounded-lg p-5 flex flex-col justify-between">
+              <div className="">
+                <p className="text-sm font-medium bg-orange-500 text-white py-1 px-2 inline-block rounded-full mb-5">
                 Likes: {recipe.likes}
               </p>
               <img
@@ -32,7 +33,7 @@ const TopRecipes = () => {
                 alt={recipe.title}
                 className="w-full h-48 object-cover rounded-t-lg"
               />
-              <h3 className="text-xl font-semibold my-3 text-base-content">
+              <h3 className="text-lg font-semibold my-3 text-base-content">
                 {recipe.title}
               </h3>
               <div className="space-y-2 mb-5 text-base-content/70">
@@ -48,6 +49,7 @@ const TopRecipes = () => {
                     </span>
                   ))}
                 </div>
+              </div>
               </div>
               <Link to={`/recipe-details/${recipe._id}`}>
                 <button className="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition-colors font-medium cursor-pointer">

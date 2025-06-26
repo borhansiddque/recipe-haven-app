@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const About = () => {
   return (
@@ -90,18 +91,18 @@ const About = () => {
               Start sharing your favorite recipes and discover amazing dishes from our community!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/register"
+              <Link
+                to="/register"
                 className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition-colors font-medium"
               >
                 Sign Up Today
-              </a>
-              <a
-                href="/all-recipes"
+              </Link>
+              <Link
+                to="/all-recipes"
                 className="bg-base-300 text-base-content px-6 py-3 rounded-md hover:bg-base-content/10 transition-colors font-medium"
               >
                 Explore Recipes
-              </a>
+              </Link>
             </div>
           </div>
         </section>
