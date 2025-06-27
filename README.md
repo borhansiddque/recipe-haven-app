@@ -76,6 +76,23 @@ npm install
 # Start the development server
 npm run dev
 ```
+## 🛠️ Server Run Locally
+
+To run this project backend/server on your local machine:
+
+```bash
+# Clone the repository
+git clone https://github.com/borhansiddque/recipe-haven-server.git
+
+# Navigate into the project directory
+cd recipe-haven-server
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
 
 The app will run at `http://localhost:5173`
 

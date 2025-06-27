@@ -55,24 +55,24 @@ let router = createBrowserRouter([
       },
       {
         path: "about",
-        Component: About
+        Component: About,
       },
       {
         path: "support",
-        Component: Support
+        Component: Support,
       },
-      {
-        path: "my-recipes",
-        loader: () =>
-          fetch("https://recipe-haven-server-five.vercel.app/recipes"),
-        hydrateFallbackElement: <Loading />,
-        element: (
-          <PrivateRoute>
-            {" "}
-            <MyRecipes></MyRecipes>{" "}
-          </PrivateRoute>
-        ),
-      },
+      // {
+      //   path: "my-recipes",
+      //   loader: () =>
+      //     fetch("https://recipe-haven-server-five.vercel.app/recipes"),
+      //   hydrateFallbackElement: <Loading />,
+      //   element: (
+      //     <PrivateRoute>
+      //       {" "}
+      //       <MyRecipes></MyRecipes>{" "}
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: "login",
         Component: Login,
@@ -88,19 +88,38 @@ let router = createBrowserRouter([
     ],
   },
   {
-    path: '/dashboard',
-    element: <PrivateRoute> <DashboardLayout></DashboardLayout> </PrivateRoute>,
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        {" "}
+        <DashboardLayout></DashboardLayout>{" "}
+      </PrivateRoute>
+    ),
     children: [
       {
         index: true,
-        Component: Dashboard
+        loader: () => fetch("https://recipe-haven-server-five.vercel.app/recipes"),
+        hydrateFallbackElement: <Loading />,
+        Component: Dashboard,
       },
       {
         path: "add-recipe",
-        Component: AddRecipe
+        Component: AddRecipe,
       },
-    ]
-  }
+      {
+        path: "my-recipes",
+        loader: () =>
+          fetch("https://recipe-haven-server-five.vercel.app/recipes"),
+        hydrateFallbackElement: <Loading />,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <MyRecipes></MyRecipes>{" "}
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
 ]);
 
 export default router;
