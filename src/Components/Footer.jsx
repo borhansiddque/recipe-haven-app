@@ -35,7 +35,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/all-recipes"
+                  to="all-recipes"
                   className="text-base-content/70 hover:text-orange-500 transition-colors"
                 >
                   All Recipes
@@ -43,18 +43,18 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/add-recipe"
+                  to="/about"
                   className="text-base-content/70 hover:text-orange-500 transition-colors"
                 >
-                  Add Recipe
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/my-recipes"
+                  to=".support"
                   className="text-base-content/70 hover:text-orange-500 transition-colors"
                 >
-                  My Recipes
+                  Support 
                 </Link>
               </li>
             </ul>
