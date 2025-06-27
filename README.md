@@ -59,7 +59,7 @@
 
 ---
 
-## 🛠️ Run Locally
+## 🛠️ Front-End Run Locally
 
 To run this project on your local machine:
 
